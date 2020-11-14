@@ -28,7 +28,7 @@ SECRET_KEY = 'xunkccr99f#0@r%$#6rc=2(6^#o1^e00@7_)h^e1j7cb)#35j8'
 #SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[os.path.join(BASE_DIR,'icarusmotors/static'),os.path.join(BASE_DIR,'pages/static')
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 
 django_heroku.settings(locals())

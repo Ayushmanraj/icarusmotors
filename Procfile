@@ -1,1 +1,1 @@
-web: gunicorn icarusmotors.wsgi
+web: gunicorn icarusmotors.wsgi --log-file -
